@@ -35,8 +35,7 @@ server.listen(8080, () => {
 });
 
 //serup mongoose
-const MONGO_URL =
-  "mongodb+srv://hamento22:1oRx0ceay78UA5nm@cluster0.451x8eh.mongodb.net/?retryWrites=true&w=majority";
+const MONGO_URL = process.env.MONGOURL;
 
 mongoose.Promise = Promise; //Not needed in new versions, including this one. but needed in older versions.
 mongoose.connect(MONGO_URL);
